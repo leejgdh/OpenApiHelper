@@ -1,15 +1,15 @@
 using System.Net.Http.Headers;
 using System.Text;
+using DHHelper.Interfaces;
+using DHHelper.Models.Base;
+using DHHelper.Options;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
-using OpenApiHelper.Interfaces;
-using OpenApiHelper.Models.Base;
-using OpenApiHelper.Options;
 
-namespace OpenApiHelper.Clients
+namespace DHHelper.Clients
 {
 
-    public class ApiClient
+    public class ApiClient<T> where T : IRequestBase 
     {
         public HttpClient _requestClient;
 
@@ -29,7 +29,7 @@ namespace OpenApiHelper.Clients
         }
 
 
-        public virtual async Task<TaskBase<T>> SendRequestAsync<T>(IRequestBase request)
+        public virtual async Task<TaskBase<T>> SendRequestAsync(IRequestBase request)
         {
             TaskBase<T> result = new TaskBase<T>();
 
@@ -67,7 +67,6 @@ namespace OpenApiHelper.Clients
             return result;
         }
 
-
         private Task<HttpResponseMessage> SendRequest(IRequestBase request)
         {
 
@@ -92,8 +91,6 @@ namespace OpenApiHelper.Clients
             }
 
         }
-
-
 
         public virtual void SetHeader() { }
     }

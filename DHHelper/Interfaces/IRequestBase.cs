@@ -1,4 +1,4 @@
-namespace OpenApiHelper.Interfaces
+namespace DHHelper.Interfaces
 {
 
     public interface IRequestBase

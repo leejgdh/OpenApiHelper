@@ -1,4 +1,4 @@
-namespace OpenApiHelper.Models.Base
+namespace DHHelper.Models.Base
 {
 
     public class TaskBase<T>

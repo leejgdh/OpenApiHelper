@@ -1,4 +1,4 @@
-namespace OpenApiHelper.Options
+namespace DHHelper.Options
 {
 
     public class ApiClientOption
