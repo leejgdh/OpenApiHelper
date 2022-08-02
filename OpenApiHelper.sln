@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHHelper", "DHHelper\DHHelper.csproj", "{5451A9D1-F0D9-47EB-AC27-522AF46EFDA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHHelper", "DHHelper\DHHelper.csproj", "{B2AD9DEA-D147-4169-8538-C3D89A65B051}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenApiHelperUnitTest", "OpenApiHelperUnitTest\OpenApiHelperUnitTest.csproj", "{733940FD-A518-406B-BFF8-E8C624A94665}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHSDK", "DHSDK\DHSDK.csproj", "{8B2D6415-E1AB-4564-9551-A8F943EC91F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopeeSDK", "ShopeeSDK\ShopeeSDK.csproj", "{5E63E34C-D1EB-4697-B9A3-25827A892C05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenApiHelperUnitTest", "OpenApiHelperUnitTest\OpenApiHelperUnitTest.csproj", "{797C6082-2D99-47C4-B521-39631C7A9217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,17 +18,17 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5451A9D1-F0D9-47EB-AC27-522AF46EFDA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5451A9D1-F0D9-47EB-AC27-522AF46EFDA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5451A9D1-F0D9-47EB-AC27-522AF46EFDA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5451A9D1-F0D9-47EB-AC27-522AF46EFDA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{733940FD-A518-406B-BFF8-E8C624A94665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{733940FD-A518-406B-BFF8-E8C624A94665}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{733940FD-A518-406B-BFF8-E8C624A94665}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{733940FD-A518-406B-BFF8-E8C624A94665}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5E63E34C-D1EB-4697-B9A3-25827A892C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E63E34C-D1EB-4697-B9A3-25827A892C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E63E34C-D1EB-4697-B9A3-25827A892C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E63E34C-D1EB-4697-B9A3-25827A892C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2AD9DEA-D147-4169-8538-C3D89A65B051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2AD9DEA-D147-4169-8538-C3D89A65B051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2AD9DEA-D147-4169-8538-C3D89A65B051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2AD9DEA-D147-4169-8538-C3D89A65B051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2D6415-E1AB-4564-9551-A8F943EC91F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2D6415-E1AB-4564-9551-A8F943EC91F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2D6415-E1AB-4564-9551-A8F943EC91F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2D6415-E1AB-4564-9551-A8F943EC91F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{797C6082-2D99-47C4-B521-39631C7A9217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797C6082-2D99-47C4-B521-39631C7A9217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797C6082-2D99-47C4-B521-39631C7A9217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797C6082-2D99-47C4-B521-39631C7A9217}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

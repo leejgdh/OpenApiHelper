@@ -28,7 +28,6 @@ namespace DHHelper.Clients
 
         }
 
-
         public virtual async Task<TaskBase<T>> SendRequestAsync(IRequestBase request)
         {
             TaskBase<T> result = new TaskBase<T>();
