@@ -1,5 +1,7 @@
 using System.Net.Http.Headers;
 using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
 using DHHelper.Interfaces;
 using DHHelper.Models.Base;
 using DHHelper.Options;
@@ -9,7 +11,7 @@ using Newtonsoft.Json;
 namespace DHHelper.Clients
 {
 
-    public class ApiClient<T> where T : IRequestBase 
+    public class ApiClient<T> where T : IRequestBase
     {
         public HttpClient _requestClient;
 
@@ -28,24 +30,36 @@ namespace DHHelper.Clients
 
         }
 
-        public virtual async Task<TaskBase<T>> SendRequestAsync(IRequestBase request)
+        public virtual async Task<TaskBase<R?>> SendRequestAsync<R>(IRequestBase request)
         {
-            TaskBase<T> result = new TaskBase<T>();
+            TaskBase<R> result = new TaskBase<R>();
 
             try
             {
                 SetHeader();
 
-                var response = await SendRequest(request);
+                var httpResponse = await SendRequest(request);
 
-                result.IsSuccess = response.IsSuccessStatusCode;
+                result.IsSuccess = httpResponse.IsSuccessStatusCode;
 
-                string content = await response.Content.ReadAsStringAsync();
+                string content = await httpResponse.Content.ReadAsStringAsync();
 
                 if (result.IsSuccess)
                 {
+                    if (request.ResponseType == "Xml")
+                    {
 
-                    result.Result = JsonConvert.DeserializeObject<T>(content);
+                        XmlSerializer ser = new XmlSerializer(typeof(R));
+
+                        using (TextReader reader = new StringReader(content))
+                        {
+                            result.Result = (R?)ser.Deserialize(reader);
+                        }
+                    }
+                    else if (request.ResponseType == "Json")
+                    {
+                        result.Result = JsonConvert.DeserializeObject<R>(content);
+                    }
 
                 }
                 else

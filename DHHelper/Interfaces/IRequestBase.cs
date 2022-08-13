@@ -7,6 +7,8 @@ namespace DHHelper.Interfaces
 
         HttpMethod HttpMethod { get; }
 
+        string ResponseType { get; set; }
+
         string ToQueryString();
 
         string ToPayload();

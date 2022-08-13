@@ -16,6 +16,8 @@ namespace DHHelper.Models.Base
         [JsonIgnore]
         public virtual bool HasAuthorize => false;
 
+        public virtual string ResponseType { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public virtual string ToPayload()
         {
 

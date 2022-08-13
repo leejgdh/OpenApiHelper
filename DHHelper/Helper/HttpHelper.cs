@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using DHHelper.Models.Base;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace DHHelper.Helper
 {
@@ -88,8 +89,20 @@ namespace DHHelper.Helper
 
                     }else{
 
+                        //json convert를 기반으로 하는게 편하려나 ..
+                        string json = JsonConvert.SerializeObject(obj);
 
-                        value = propertyValue.ToString()!;
+                        var jsonObject = JObject.Parse(json);
+
+                        if(jsonObject != null){
+
+                            value = jsonObject[key]!.ToString();
+                        }else{
+                            value = propertyValue.ToString()!;
+                        }
+                        
+
+                        
                     }
 
                 }
